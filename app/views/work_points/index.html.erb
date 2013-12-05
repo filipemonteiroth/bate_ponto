@@ -1,8 +1,8 @@
 <h1>Listing work_points</h1>
-
-<table>
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
+      <th>Dia</th>
       <th>Entrada</th>
       <th>Almoco</th>
       <th>Volta almoco</th>
@@ -16,10 +16,11 @@
   <tbody>
     <% @work_points.each do |work_point| %>
       <tr>
-        <td><%= work_point.entrada %></td>
-        <td><%= work_point.almoco %></td>
-        <td><%= work_point.volta_almoco %></td>
-        <td><%= work_point.saida %></td>
+        <td><%= work_point.entrada.strftime("%d/%m") %></td>
+        <td><%= work_point.entrada.strftime("%I:%M") %></td>
+        <td><%= work_point.almoco.strftime("%I:%M") %></td>
+        <td><%= work_point.volta_almoco.strftime("%I:%M") %></td>
+        <td><%= work_point.saida.strftime("%I:%M") %></td>
         <td><%= link_to 'Show', work_point %></td>
         <td><%= link_to 'Edit', edit_work_point_path(work_point) %></td>
         <td><%= link_to 'Destroy', work_point, method: :delete, data: { confirm: 'Are you sure?' } %></td>

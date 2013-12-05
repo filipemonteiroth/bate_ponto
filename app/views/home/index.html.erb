@@ -3,7 +3,7 @@
   </head>
   <body>
     <h1>Pontos do mês</h1>
-    <table>
+    <table class="table table-bordered table-hover">
       <thead>
         <tr>
           <th>Dia</th>
@@ -28,7 +28,7 @@
       </tbody>
       <tfooter>
         <tr>
-          <td>Total do mês: <%= total_do_mes(@work_points) %> </td>
+          <td colspan="6">Total do mês - <%= total_do_mes(@work_points) %> </td>
         </tr>
       </tfooter>
     </table>
