@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Entrada:</strong>
+  <%= @work_point.entrada %>
+</p>
+
+<p>
+  <strong>Almoco:</strong>
+  <%= @work_point.almoco %>
+</p>
+
+<p>
+  <strong>Volta almoco:</strong>
+  <%= @work_point.volta_almoco %>
+</p>
+
+<p>
+  <strong>Saida:</strong>
+  <%= @work_point.saida %>
+</p>
+
+<%= link_to 'Edit', edit_work_point_path(@work_point) %> |
+<%= link_to 'Back', work_points_path %>

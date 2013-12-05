@@ -1,0 +1,36 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Pontos do mês</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Dia</th>
+          <th>Entrada</th>
+          <th>Almoço</th>
+          <th>Volta do almoço</th>
+          <th>Saída</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @work_points.each do |work_point| %>
+          <tr>
+            <td><%= work_point.entrada.strftime("%d/%m") %></td>
+            <td><%= work_point.entrada.strftime("%I:%M") %></td>
+            <td><%= work_point.almoco.strftime("%I:%M") %></td>
+            <td><%= work_point.volta_almoco.strftime("%I:%M") %></td>
+            <td><%= work_point.saida.strftime("%I:%M") %></td>
+            <td><%= work_point.total_convertido %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      <tfooter>
+        <tr>
+          <td>Total do mês: <%= total_do_mes(@work_points) %> </td>
+        </tr>
+      </tfooter>
+    </table>
+  </body>
+</html>

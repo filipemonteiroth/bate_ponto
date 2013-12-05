@@ -1,0 +1,33 @@
+<h1>Listing work_points</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entrada</th>
+      <th>Almoco</th>
+      <th>Volta almoco</th>
+      <th>Saida</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_points.each do |work_point| %>
+      <tr>
+        <td><%= work_point.entrada %></td>
+        <td><%= work_point.almoco %></td>
+        <td><%= work_point.volta_almoco %></td>
+        <td><%= work_point.saida %></td>
+        <td><%= link_to 'Show', work_point %></td>
+        <td><%= link_to 'Edit', edit_work_point_path(work_point) %></td>
+        <td><%= link_to 'Destroy', work_point, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work point', new_work_point_path %>

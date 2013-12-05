@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  entrada: 2013-12-05 15:14:03
+  almoco: 2013-12-05 15:14:03
+  volta_almoco: 2013-12-05 15:14:03
+  saida: 2013-12-05 15:14:03
+
+two:
+  entrada: 2013-12-05 15:14:03
+  almoco: 2013-12-05 15:14:03
+  volta_almoco: 2013-12-05 15:14:03
+  saida: 2013-12-05 15:14:03

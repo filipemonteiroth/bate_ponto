@@ -1,0 +1,2 @@
+module WorkPointsHelper
+end
